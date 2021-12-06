@@ -70,6 +70,15 @@
         "name": "p1_stand.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "grassHalfMid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "grassHalfMid.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -132,9 +141,25 @@
           "name": "Player",
           "persistentUuid": "5e38e767-f3f2-4a35-9e08-3fc0b0e000a2",
           "width": 0,
-          "x": 130,
-          "y": 411,
+          "x": 319,
+          "y": 129,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "GrassPlatform",
+          "persistentUuid": "f33f3356-39a3-43e2-9fc1-8e38ab236052",
+          "width": 247,
+          "x": 285,
+          "y": 277,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -238,6 +263,25 @@
               ]
             }
           ]
+        },
+        {
+          "height": 32,
+          "name": "GrassPlatform",
+          "tags": "",
+          "texture": "grassHalfMid.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ]
         }
       ],
       "events": [
@@ -290,6 +334,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
         {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior"
